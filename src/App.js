@@ -1,14 +1,32 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import userContext from "./UserContext";
+import HomePage from "./HomePage";
 
 function App() {
+  const user = [
+    {
+      id: 1,
+      name: "Tochukwu",
+      username: "toks"
+    },
+    {
+      id: 2,
+      name: "Emeka",
+      username: "Emex"
+    },
+    {
+      id: 3,
+      name: "Ebere",
+      username: "Eby"
+    }
+  ];
+
   return (
-    <div className="App">
-      <header className="App-body">
-        <p>This is a basic Authentication example using React</p>
-      </header>
-    </div>
+    <userContext.Provider value={user}>
+      <HomePage />
+    </userContext.Provider>
   );
 }
 
-export default App
+export default App;

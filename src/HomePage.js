@@ -1,17 +1,19 @@
-import React, {useContext} from 'react'
-import userContext from './UserContext'
+import React from "react";
+
+import Header from "./Header";
+import AddUser from "./AddUser";
+import Users from './UsersList'
 
 function HomePage() {
-
-    const user = useContext(userContext)
-
-    return (
-      <div className="App">
-        <header className="App-body">
-          <p>This is a basic Authentication example using React by {user.name}</p>
-        </header>
+  return (
+    <div className="medium-container">
+      <Header />
+      <div className="flex-row">
+        <AddUser />
+        <Users />
       </div>
-    );
+    </div>
+  );
 }
 
-export default HomePage
+export default HomePage;

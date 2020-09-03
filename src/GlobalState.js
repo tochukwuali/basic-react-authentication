@@ -5,17 +5,20 @@ const users = [
   {
     id: 1,
     name: "Tochukwu",
-    email: "toks@gmail.com"
+    email: "toks@gmail.com",
+    status: 1
   },
   {
     id: 2,
     name: "Emeka",
-    email: "Emex@yahoo.com"
+    email: "Emex@yahoo.com",
+    status: 0
   },
   {
     id: 3,
     name: "Ebere",
-    email: "Eby4real@gmail.com"
+    email: "Eby4real@gmail.com",
+    status: 1
   }
 ];
 

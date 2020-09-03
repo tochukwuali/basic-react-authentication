@@ -20,7 +20,7 @@ export default function UsersList() {
             <tr key={index}>
               <td>{user.name}</td>
               <td>{user.email}</td>
-              <td>status</td>
+              <td>{user.status}</td>
             </tr>
           ))}
         </tbody>

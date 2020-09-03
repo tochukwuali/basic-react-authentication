@@ -1,15 +1,34 @@
-import React from 'react'
+import React, {useContext, useState} from 'react'
+import {UserContext} from './GlobalState'
 
 export default function AddUser() {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
     
+    const { addUser } = useContext(UserContext)
+
+    const onSubmit = (e) => {
+        e.preventDefault()
+
+        const newUser =  {
+            id: Math.floor(Math.random() * 100000000),
+            name,
+            email
+    }
+
+    addUser(newUser)
+    setEmail('')
+    setName('')
+ }   
+
     return (
         <div className="flex-large">
             <h4>Add a User</h4>
-            <form>
+            <form onSubmit={onSubmit}>
                 <label htmlFor="Name">Name</label>
-                <input type="text" name="name" />
+                <input type="text" name="name" value={name} onChange={e => setName(e.target.value)}/>
                 <label htmlFor="Email Address">Email Address</label>
-                <input type="email" name="email"  />
+                <input type="email" name="email" value={email} onChange={e => setEmail(e.target.value)}/>
                 <button> Add New User</button>
             </form>
             

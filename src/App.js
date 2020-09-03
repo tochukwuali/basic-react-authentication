@@ -1,16 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import "./main.css";
-import UsersProvider from "./GlobalState";
-import HomePage from "./HomePage";
-
+import { UsersProvider } from "./GlobalState";
+import { HomePage } from "./HomePage";
 
 function App() {
 
   return (
     <UsersProvider>  
-      <div className="small-container">
-           <HomePage />
-      </div>
+      <HomePage />
     </UsersProvider>
   );
 }

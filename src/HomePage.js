@@ -4,7 +4,7 @@ import Header from "./Header";
 import AddUser from "./AddUser";
 import Users from './UsersList'
 
-function HomePage() {
+export function HomePage() {
   return (
     <div className="medium-container">
       <Header />
@@ -15,5 +15,3 @@ function HomePage() {
     </div>
   );
 }
-
-export default HomePage;

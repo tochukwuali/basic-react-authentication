@@ -6,19 +6,19 @@ const users = [
     id: 1,
     name: "Tochukwu",
     email: "toks@gmail.com",
-    status: 1
+    status: 'Yes'
   },
   {
     id: 2,
     name: "Emeka",
     email: "Emex@yahoo.com",
-    status: 0
+    status: 'No'
   },
   {
     id: 3,
     name: "Ebere",
     email: "Eby4real@gmail.com",
-    status: 1
+    status: 'Yes'
   }
 ];
 

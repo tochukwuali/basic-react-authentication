@@ -3,7 +3,6 @@ import { UserContext } from "./GlobalState";
 
 export default function UsersList() {
   const { users } = useContext(UserContext);
-  console.log(users);
   return (
     <div className="flex-large">
       <h4>View Users</h4>
@@ -12,7 +11,7 @@ export default function UsersList() {
           <tr>
             <th>Name</th>
             <th>Email</th>
-            <th>Status</th>
+            <th>Coming ?</th>
           </tr>
         </thead>
         <tbody>

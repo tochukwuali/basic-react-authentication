@@ -4,6 +4,7 @@ import {UserContext} from './GlobalState'
 export default function AddUser() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
+    const [status, setStatus] = useState('yes')
     
     const { addUser } = useContext(UserContext)
 
@@ -13,7 +14,8 @@ export default function AddUser() {
         const newUser =  {
             id: Math.floor(Math.random() * 100000000),
             name,
-            email
+            email,
+            status
     }
 
     addUser(newUser)
@@ -40,12 +42,12 @@ export default function AddUser() {
             onChange={e => setEmail(e.target.value)}
           />
           <label htmlFor="choose">Are you coming ?</label>
-          <select id="choose">
+          <select value={status} onChange={e => setStatus(e.target.value)}>
             {/* <option disabled selected>
               Are you coming ?
             </option> */}
-            <option value="option-1">Yes</option>
-            <option value="option-2">No</option>
+            <option value="Yes" selected>Yes</option>
+            <option value="No">No</option>
           </select>
           <button> Add New User</button>
         </form>
